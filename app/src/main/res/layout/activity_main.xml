@@ -13,13 +13,13 @@
         android:id="@+id/gametitle"
 
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="3dp"
         android:gravity="center_horizontal"
         android:text="Choisissez le nombre de caractères"
         android:textColor="#ffffff"
-        android:textSize="40dp"
+        android:textSize="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,11 +27,11 @@
 
     <ImageView
         android:id="@+id/four"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/gametitle"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/four"
 
         app:layout_constraintEnd_toStartOf="@+id/five"
@@ -41,12 +41,12 @@
 
     <ImageView
         android:id="@+id/five"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/gametitle"
         android:layout_alignParentRight="true"
 
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="40dp"
         android:src="@drawable/five"
         app:layout_constraintEnd_toEndOf="@+id/gametitle"
@@ -57,8 +57,8 @@
 
     <ImageView
         android:id="@+id/six"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
         android:layout_below="@+id/four"
         android:layout_marginStart="100dp"
 

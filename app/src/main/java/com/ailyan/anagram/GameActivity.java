@@ -23,6 +23,7 @@ public class GameActivity extends AppCompatActivity {
     private Button fifth_letter_Button;
     private Button sixth_letter_Button;
     private ImageView afficherSolution;
+    private ImageView RetourButton;
 
 
     private TextView first_letter_answer_TextView;
@@ -53,6 +54,9 @@ public class GameActivity extends AppCompatActivity {
     private int fifithtextview = 0;
     private int sixthtextview = 0;
     public AlertDialog dialog = null;
+    private int ilevel1=0;
+    private int ilevel2=0;
+    private int ilevel3=0;
 
     private int[] letters_pointer_array;
     int[] words_order_pointer_array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -120,9 +124,10 @@ public class GameActivity extends AppCompatActivity {
         fifth_letter_answer_TextView = (TextView) findViewById(R.id.fifth_letter_answer_tv);
         sixth_letter_answer_TextView = (TextView) findViewById(R.id.sixth_letter_answer_tv);
 
-
+        RetourButton = (ImageView) findViewById(R.id.retour);
         resetButton = (Button) findViewById(R.id.resetButton);
         skipButton = (Button) findViewById(R.id.skipButton);
+
 
         //Download a user-selected level from MainActivity
         Intent intent = getIntent();
@@ -135,6 +140,9 @@ public class GameActivity extends AppCompatActivity {
         resetButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+                ilevel1=0;
+                ilevel2=0;
+                ilevel3=0;
                 resetAnswer();
 
             }
@@ -143,6 +151,9 @@ public class GameActivity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+                ilevel1=0;
+                ilevel2=0;
+                ilevel3=0;
                 skipAnswer();
             }
         });
@@ -150,6 +161,12 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ShowSolution();
+            }
+        });
+        RetourButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(GameActivity.this, MainActivity.class));
             }
         });
 
@@ -355,40 +372,76 @@ public class GameActivity extends AppCompatActivity {
     //show the solution of word
     public void ShowSolution() {
         if(level==1) {
-            first_letter_answer_TextView.setText(mywordseasy[wordorder][0]);
-            first_letter_answer_TextView.setVisibility(View.VISIBLE);
-            second_letter_answer_TextView.setText(mywordseasy[wordorder][1]);
-            second_letter_answer_TextView.setVisibility(View.VISIBLE);
-            third_letter_answer_TextView.setText(mywordseasy[wordorder][2]);
-            third_letter_answer_TextView.setVisibility(View.VISIBLE);
-            fourth_letter_answer_TextView.setText(mywordseasy[wordorder][3]);
-            fourth_letter_answer_TextView.setVisibility(View.VISIBLE);
+
+                if (ilevel1==0) {
+                    first_letter_answer_TextView.setText(mywordseasy[wordorder][0]);
+                    first_letter_answer_TextView.setVisibility(View.VISIBLE);
+                }
+                if (ilevel1 == 1) {
+                    second_letter_answer_TextView.setText(mywordseasy[wordorder][1]);
+                    second_letter_answer_TextView.setVisibility(View.VISIBLE);
+                }
+                if (ilevel1 == 2){
+                    third_letter_answer_TextView.setText(mywordseasy[wordorder][2]);
+                third_letter_answer_TextView.setVisibility(View.VISIBLE);
+            }
+            if(ilevel1==3) {
+                fourth_letter_answer_TextView.setText(mywordseasy[wordorder][3]);
+                fourth_letter_answer_TextView.setVisibility(View.VISIBLE);
+            }
+            ilevel1++;
+
         }
        if(level==2){
-           first_letter_answer_TextView.setText(mywordsmedium[wordorder][0]);
-           first_letter_answer_TextView.setVisibility(View.VISIBLE);
-           second_letter_answer_TextView.setText(mywordsmedium[wordorder][1]);
-           second_letter_answer_TextView.setVisibility(View.VISIBLE);
-           third_letter_answer_TextView.setText(mywordsmedium[wordorder][2]);
-           third_letter_answer_TextView.setVisibility(View.VISIBLE);
-           fourth_letter_answer_TextView.setText(mywordsmedium[wordorder][3]);
-           fourth_letter_answer_TextView.setVisibility(View.VISIBLE);
-           fifth_letter_answer_TextView.setText(mywordsmedium[wordorder][4]);
-           fifth_letter_answer_TextView.setVisibility(View.VISIBLE);
+           if (ilevel2==0) {
+               first_letter_answer_TextView.setText(mywordsmedium[wordorder][0]);
+               first_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           if (ilevel2==1) {
+               second_letter_answer_TextView.setText(mywordsmedium[wordorder][1]);
+               second_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           if (ilevel2==2) {
+               third_letter_answer_TextView.setText(mywordsmedium[wordorder][2]);
+               third_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           if (ilevel2==3) {
+               fourth_letter_answer_TextView.setText(mywordsmedium[wordorder][3]);
+               fourth_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           if (ilevel2==4) {
+               fifth_letter_answer_TextView.setText(mywordsmedium[wordorder][4]);
+               fifth_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           ilevel2++;
+
        }
        if(level==3){
-           first_letter_answer_TextView.setText(mywordshard[wordorder][0]);
-           first_letter_answer_TextView.setVisibility(View.VISIBLE);
-           second_letter_answer_TextView.setText(mywordshard[wordorder][1]);
-           second_letter_answer_TextView.setVisibility(View.VISIBLE);
-           third_letter_answer_TextView.setText(mywordshard[wordorder][2]);
-           third_letter_answer_TextView.setVisibility(View.VISIBLE);
-           fourth_letter_answer_TextView.setText(mywordshard[wordorder][3]);
-           fourth_letter_answer_TextView.setVisibility(View.VISIBLE);
-           fifth_letter_answer_TextView.setText(mywordshard[wordorder][4]);
-           fifth_letter_answer_TextView.setVisibility(View.VISIBLE);
-           sixth_letter_answer_TextView.setText(mywordshard[wordorder][5]);
-           sixth_letter_answer_TextView.setVisibility(View.VISIBLE);
+           if (ilevel3==0) {
+               first_letter_answer_TextView.setText(mywordshard[wordorder][0]);
+               first_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           if (ilevel3==1) {
+               second_letter_answer_TextView.setText(mywordshard[wordorder][1]);
+               second_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           if (ilevel3==2) {
+               third_letter_answer_TextView.setText(mywordshard[wordorder][2]);
+               third_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           if (ilevel3==3) {
+               fourth_letter_answer_TextView.setText(mywordshard[wordorder][3]);
+               fourth_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           if (ilevel3==4) {
+               fifth_letter_answer_TextView.setText(mywordshard[wordorder][4]);
+               fifth_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           if (ilevel3==5) {
+               sixth_letter_answer_TextView.setText(mywordshard[wordorder][5]);
+               sixth_letter_answer_TextView.setVisibility(View.VISIBLE);
+           }
+           ilevel3++;
        }
     }
 
@@ -588,6 +641,7 @@ public class GameActivity extends AppCompatActivity {
         alertdialogue.setView(incorrecteModal);
         dialog = alertdialogue.create();
         dialog.show();
+        dialog.setCanceledOnTouchOutside(false);
         ImageView ok=incorrecteModal.findViewById(R.id.ok);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -605,6 +659,7 @@ public class GameActivity extends AppCompatActivity {
         alertdialogue.setView(incorrecteModal);
         dialog = alertdialogue.create();
         dialog.show();
+        dialog.setCanceledOnTouchOutside(false);
         ImageView ok=incorrecteModal.findViewById(R.id.ok);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override

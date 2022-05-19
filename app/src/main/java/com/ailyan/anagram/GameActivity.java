@@ -59,7 +59,7 @@ public class GameActivity extends AppCompatActivity {
     private int ilevel3=0;
 
     private int[] letters_pointer_array;
-    int[] words_order_pointer_array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int[] words_order_pointer_array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29};
 
 
     //Declaration of tables with game words per level
@@ -74,6 +74,26 @@ public class GameActivity extends AppCompatActivity {
             {"l", "o", "n", "g"},
             {"v", "e", "r", "t"},
             {"s", "e", "u", "l"},
+            {"c", "h", "o", "u"},
+            {"k", "i", "w", "i"},
+            {"l", "a", "m","a"},
+            {"l", "i", "o", "n"},
+            {"c", "h", "a", "t"},
+            {"c", "u", "b", "a"},
+            {"i", "n", "d", "e"},
+            {"m", "a", "l", "i"},
+            {"t", "o", "g", "o"},
+            {"f", "i", "l", "s"},
+            {"m", "è", "r", "e"},
+            {"p", "è", "r", "e"},
+            {"m", "o", "d", "e"},
+            {"o", "r", "a", "l"},
+            {"n", "i", "c", "e"},
+            {"l", "y", "o", "n"},
+            {"m", "a", "n", "s"},
+            {"s", "t", "o", "p"},
+            {"m", "a", "ï", "s"},
+            {"m", "o", "r", "t"},
     };
 
     String[][] mywordsmedium = new String[][]{
@@ -87,6 +107,26 @@ public class GameActivity extends AppCompatActivity {
             {"p", "o", "i", "n", "t"},
             {"j", "e", "u", "n", "e"},
             {"f", "e", "m", "m", "e"},
+            {"p", "o", "i", "r", "e"},
+            {"p", "o", "m", "m", "e"},
+            {"n", "a", "v", "e", "t"},
+            {"o", "l", "i", "v", "e"},
+            {"p", "e", "t", "i", "t"},
+            {"g", "r", "a", "n", "d"},
+            {"t", "e", "r", "r", "e"},
+            {"l", "a", "p", "i", "n"},
+            {"p", "o", "u", "l", "e"},
+            {"d", "i", "n", "d", "e"},
+            {"v", "a", "c", "h", "e"},
+            {"m", "a", "r", "o", "c"},
+            {"f", "r", "è", "r", "e"},
+            {"t", "a", "n", "t", "e"},
+            {"b", "e", "l", "l", "e"},
+            {"c", "h", "i", "n", "e"},
+            {"b", "è", "n", "i", "n"},
+            {"c", "h", "i", "l", "i"},
+            {"f", "i", "n", "i", "r"},
+            {"t", "e", "n", "i", "r"},
     };
 
     String[][] mywordshard = new String[][]{
@@ -100,6 +140,26 @@ public class GameActivity extends AppCompatActivity {
             {"c", "h", "e", "v", "a", "l"},
             {"f", "r", "a", "n", "c", "e"},
             {"n", "a", "n", "t", "e", "s"},
+            {"o", "i", "g", "n", "o", "n"},
+            {"s", "a", "l", "a", "d", "e"},
+            {"t", "o", "m", "a", "t", "e"},
+            {"a", "v", "o", "c", "a", "t"},
+            {"p", "l", "a", "n", "t", "e"},
+            {"c", "o", "u", "r", "g", "e"},
+            {"f", "r", "a", "i", "s", "e"},
+            {"p", "a", "t", "a", "t", "e"},
+            {"o", "r", "a", "n", "g", "e"},
+            {"s", "o", "u", "r", "i", "s"},
+            {"c", "h", "è", "v", "r", "e"},
+            {"c", "a", "n", "a", "r", "d"},
+            {"c", "o", "u", "s", "i", "n"},
+            {"p", "a", "r", "o", "l", "e"},
+            {"l", "a", "n", "g", "u", "e"},
+            {"a", "m", "i", "e", "n", "s"},
+            {"p", "a", "r", "t", "i", "r"},
+            {"s", "e", "n", "t", "i", "r"},
+            {"m", "o", "n", "t", "e", "r"},
+            {"h", "o", "c", "k", "e", "y"},
     };
 
 
@@ -160,6 +220,7 @@ public class GameActivity extends AppCompatActivity {
         afficherSolution.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 ShowSolution();
             }
         });
@@ -372,6 +433,10 @@ public class GameActivity extends AppCompatActivity {
     //show the solution of word
     public void ShowSolution() {
         if(level==1) {
+                     first_letter_Button.setVisibility(View.VISIBLE);
+                     second_letter_Button.setVisibility(View.VISIBLE);
+                     third_letter_Button.setVisibility(View.VISIBLE);
+                     fourth_letter_Button.setVisibility(View.VISIBLE);
 
                 if (ilevel1==0) {
                     first_letter_answer_TextView.setText(mywordseasy[wordorder][0]);
@@ -393,6 +458,11 @@ public class GameActivity extends AppCompatActivity {
 
         }
        if(level==2){
+           first_letter_Button.setVisibility(View.VISIBLE);
+           second_letter_Button.setVisibility(View.VISIBLE);
+           third_letter_Button.setVisibility(View.VISIBLE);
+           fourth_letter_Button.setVisibility(View.VISIBLE);
+           fifth_letter_Button.setVisibility(View.VISIBLE);
            if (ilevel2==0) {
                first_letter_answer_TextView.setText(mywordsmedium[wordorder][0]);
                first_letter_answer_TextView.setVisibility(View.VISIBLE);
@@ -417,6 +487,12 @@ public class GameActivity extends AppCompatActivity {
 
        }
        if(level==3){
+           first_letter_Button.setVisibility(View.VISIBLE);
+           second_letter_Button.setVisibility(View.VISIBLE);
+           third_letter_Button.setVisibility(View.VISIBLE);
+           fourth_letter_Button.setVisibility(View.VISIBLE);
+           fifth_letter_Button.setVisibility(View.VISIBLE);
+           sixth_letter_Button.setVisibility(View.VISIBLE);
            if (ilevel3==0) {
                first_letter_answer_TextView.setText(mywordshard[wordorder][0]);
                first_letter_answer_TextView.setVisibility(View.VISIBLE);
@@ -459,7 +535,7 @@ public class GameActivity extends AppCompatActivity {
         if (correctanswer == 1)   {
             //Toast.makeText(GameActivity.this, "Well done", Toast.LENGTH_SHORT).show();
             answeredcounter++;
-            if (answeredcounter < 10)
+            if (answeredcounter < 30)
             {
                 // in this condition it is checked if all the words have been answered, if not, it continues in the game
 
@@ -529,7 +605,7 @@ public class GameActivity extends AppCompatActivity {
 
     public void skipAnswer() {
         answeredcounter++;
-        if (answeredcounter < 10)
+        if (answeredcounter < 30)
         {
             resetAnswer();
             nextWord();
@@ -623,7 +699,7 @@ public class GameActivity extends AppCompatActivity {
         do
         {
             Random rand2 = new Random();
-            randomword = rand2.nextInt(10 );
+            randomword = rand2.nextInt(30 );
             if (words_order_pointer_array[randomword] != -1)
             {
                 wordpos=words_order_pointer_array[randomword];

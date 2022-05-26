@@ -8,7 +8,7 @@
     android:paddingBottom="2dp"
     android:paddingTop="2dp"
     android:orientation="vertical"
-    android:background="#DFDED9"
+    android:background="#FFFFFF"
     android:radius="100dp"
     >
 

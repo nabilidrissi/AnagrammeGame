@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.ailyan.anagram.ResultsActivity"
-    android:background="@drawable/backgroun">
+    android:background="@drawable/backgroun"
+    android:gravity="center">
 
     <TextView
         android:id="@+id/resultsTitleTextView"
@@ -15,13 +16,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-
+       android:gravity="center"
         android:text="Félecitations!"
         android:textColor="#ffff"
-        android:textSize="100dp"
-        />
+        android:textStyle="bold"
+        android:textSize="40dp" />
 
     <TextView
         android:id="@+id/resultsTextView"
@@ -29,27 +28,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/resultsTitleTextView"
-        android:layout_alignStart="@+id/resultsTitleTextView"
-        android:layout_alignEnd="@+id/resultsTitleTextView"
-        android:layout_centerHorizontal="true"
+       android:gravity="center"
 
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
         android:textColor="#ffff"
-        android:textSize="60dp"
-        android:layout_marginTop="40dp"/>
+        android:textSize="30dp" />
 
 
     <Button
         android:id="@+id/returnmenuButton"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/resultsTextView"
-        android:layout_alignStart="@+id/resultsTextView"
-        android:layout_alignEnd="@+id/resultsTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:text="Retour au menu"
         android:background="@drawable/coustom_button"
-        android:textSize="50dp" />
+        android:gravity="center"
+        android:text="Retour au menu"
+        android:textSize="30dp" />
 
 
 

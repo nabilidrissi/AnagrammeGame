@@ -8,6 +8,7 @@
     android:paddingBottom="2dp"
     android:paddingTop="2dp"
     android:orientation="vertical"
+    android:gravity="center"
     android:background="#FFFFFF"
     android:radius="100dp"
     >
@@ -17,10 +18,10 @@
         android:layout_width="match_parent"
         android:gravity="center"
         android:id="@+id/textrong"
-        android:layout_height="220dp"
+        android:layout_height="wrap_content"
         android:text="Félicitations!"
         android:layout_marginTop="20dp"
-        android:textSize="100dp"
+        android:textSize="50dp"
         android:textStyle="bold"
         android:fontFamily="cursive"/>
 
@@ -28,24 +29,14 @@
 
     <ImageView
         android:id="@+id/ok"
-        android:layout_width="200dp"
-        android:layout_height="160dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:layout_below="@+id/textrong"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="250dp"
 
         android:layout_marginTop="10dp"
         android:src="@drawable/okk" />
 
-    <TextView
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="0dp"
-        android:layout_below="@id/ok"
-        android:text="OK"
-        android:textSize="80dp"
-        android:textStyle="bold" />
 
 
 </RelativeLayout>

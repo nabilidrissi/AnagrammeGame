@@ -12,7 +12,6 @@ public class ResultsActivity extends AppCompatActivity {
 
     private Button returnmenuButton;
     private TextView resultsTextView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

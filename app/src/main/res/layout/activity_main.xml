@@ -8,68 +8,77 @@
     android:padding="16dp"
     tools:context="com.ailyan.anagram.MainActivity"
     android:background="@drawable/backgroun">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        tools:ignore="MissingConstraints">
 
     <TextView
         android:id="@+id/gametitle"
 
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="3dp"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:text="Choisissez le nombre de caractères"
         android:textColor="#ffffff"
-        android:textSize="70dp"
+        android:textStyle="bold"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/fourAndfive"
+        app:layout_constraintTop_toBottomOf="@+id/gametitle"
+        android:layout_marginTop="40dp">
+
 
     <ImageView
         android:id="@+id/four"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/gametitle"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
         android:src="@drawable/four"
-
-        app:layout_constraintEnd_toStartOf="@+id/five"
-        app:layout_constraintStart_toStartOf="@+id/gametitle"
-        app:layout_constraintTop_toBottomOf="@+id/gametitle"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/five"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:layout_below="@+id/gametitle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
         android:layout_alignParentRight="true"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="40dp"
         android:src="@drawable/five"
-        app:layout_constraintEnd_toEndOf="@+id/gametitle"
-
-        app:layout_constraintStart_toEndOf="@+id/four"
-        app:layout_constraintTop_toBottomOf="@+id/gametitle"
         tools:ignore="MissingConstraints" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/lastone"
+        app:layout_constraintTop_toBottomOf="@+id/fourAndfive"
+        android:layout_marginTop="0dp">
 
     <ImageView
         android:id="@+id/six"
-        android:layout_width="150dp"
-        android:layout_height="200dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/four"
-        android:layout_marginStart="100dp"
-
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="100dp"
+        android:gravity="center"
         android:src="@drawable/numero6"
-        app:layout_constraintEnd_toStartOf="@+id/five"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toEndOf="@+id/four"
-        app:layout_constraintTop_toBottomOf="@+id/five"
+        app:layout_constraintTop_toBottomOf="@+id/fourAndfive"
         tools:ignore="MissingConstraints" />
+    </LinearLayout>
+</LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

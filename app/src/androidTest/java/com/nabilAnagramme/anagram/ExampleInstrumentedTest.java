@@ -1,4 +1,4 @@
-package com.ailyan.anagram;
+package com.nabilAnagramme.anagram;
 
 import android.content.Context;
 

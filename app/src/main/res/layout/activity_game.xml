@@ -11,8 +11,9 @@
     android:paddingLeft="4dp"
     android:paddingRight="4dp"
     android:paddingTop="4dp"
-    tools:context="com.ailyan.anagram.GameActivity"
-    android:background="@drawable/backgroun">
+    tools:context="com.nabilAnagramme.anagram.GameActivity"
+    android:background="@drawable/backgroun"
+    tools:ignore="MissingClass">
 
     <ImageView
         android:id="@+id/retour"

@@ -1,11 +1,9 @@
-package com.ailyan.anagram;
+package com.nabilAnagramme.anagram;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import androidx.appcompat.app.AlertDialog;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
 
 import android.view.View;
 import android.widget.ImageView;
